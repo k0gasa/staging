@@ -335,7 +335,7 @@ let items = [];
 const datasetSelector = document.getElementById('datasetSelector');
 
 function loadData(dataset = 'garments') {
-  fetch(`https://k0gasa.github.io/items/${dataset}.json`)
+  fetch(`https://k0gasa.github.io/staging/${dataset}.json`)
     .then(response => response.json())
     .then(data => {
       items = data.filter(item => item && item.id); // Filter out null/empty items
